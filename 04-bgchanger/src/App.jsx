@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Btn from './components/Btn'
 // import './App.css'
 
 function App() {
@@ -25,6 +26,13 @@ function App() {
             onClick={() => { setColor('purple') }}
             className='outline-none px-4 py-1 rounded-full shadow-lg text-white'
             style={{ backgroundColor: 'Purple' }}>Purple</button>
+            <Btn color="skyblue" setColor={setColor} />
+            <Btn color="magenta" setColor={setColor} />
+            <Btn color="grey" setColor={setColor} />
+            <Btn color="brown" setColor={setColor} />
+
+
+
         </div>
       </div>
     </div>
