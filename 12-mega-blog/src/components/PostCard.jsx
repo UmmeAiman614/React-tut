@@ -1,19 +1,24 @@
 import React from 'react'
-import servive from '../appwrite/config'
-import { link } from 'react-router-dom'
+import appwriteService from "../appwrite/config"
+import {Link} from 'react-router-dom'
 
-function PostCard({ $id, title, featuredImage }) {
-    return (
-        <link to = {`/post/${$id}`} >
-            <div className='w-full bg-gray-100 mb-4 p-4 rounded-xl'>
-                <div className='w-full justify-center mb-4'>
-                    <img src={servive.getFilePreview(featuredImage)} alt={title}  className='rounded-lg'/>
-                   
-                </div>
-                <h2 className='text-xl font-bold'>{title}</h2>
+function PostCard({$id, title, featuredImage}) {
+    
+  return (
+    <Link to={`/post/${$id}`}>
+        <div className='w-full bg-gray-100 rounded-xl p-4'>
+            <div className='w-full justify-center mb-4'>
+                <img src={appwriteService.getFilePreview(featuredImage)} alt={title}
+                className='rounded-xl' />
+
             </div>
-        </link >
+            <h2
+            className='text-xl font-bold'
+            >{title}</h2>
+        </div>
+    </Link>
   )
 }
+
 
 export default PostCard
